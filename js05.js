@@ -17,8 +17,11 @@ let lightBox=document.getElementById("lightbox");
 let lbTitle=document.createElement("h1");
 let lbCounter=document.createElement("div");
 let lbPrev=document.createElement("div");
-let lbNext=document.createElement("div")
+lbPrev.innerHTML= "&#9664;";
+let lbNext=document.createElement("div");
+lbNext.innerHTML= "&#9654;";
 let lbPlay=document.createElement("div");
+lbPlay.innerHTML="&#9199;";
 let lbImages=document.createElement("div");
 //Design lightbox title
 lightBox.appendChild(lbTitle);
