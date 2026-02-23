@@ -12,7 +12,7 @@
 window.addEventListener("load",createLightbox);
 function createLightbox(){
 //Lightbox Container
-let lightbox=document.getElementById("lightbox");
+let lightBox=document.getElementById("lightbox");
 //parts of a lightbox
 let lbTitle=document.createElement("h1");
 let lbCounter=document.createElement("div");
@@ -20,6 +20,30 @@ let lbPrev=document.createElement("div");
 let lbNext=document.createElement("div")
 let lbPlay=document.createElement("div");
 let lbImages=document.createElement("div");
+//Design lightbox title
+lightBox.appendChild(lbTitle);
+lbTitle.id="lbTitle";
+
+//Design lightbox slide counter
+lightBox.appendChild(lbCounter);
+lbCounter.id="lbCounter";
+
+//Design lightbox previous slide button
+lightBox.appendChild(lbPrev);
+lbPrev.id="lbPrev";
+
+//Design lightbox next slide button
+lightBox.appendChild(lbNext);
+lbNext.id="lbNext";
+
+//Design lightbox Play-Pause button
+lightBox.appendChild(lbPlay);
+lbPlay.id="lbPlay";
+
+//Design lightbox images container
+lightBox.appendChild(lbImages);
+lbImages.id="lbImages";
+
 
 }
 window.addEventListener("load", setupGallery);
