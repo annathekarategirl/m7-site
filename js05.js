@@ -84,6 +84,10 @@ function showPrev(){
       (currentImg>1) ? currentImg-- : currentImg = imgCount;
       lbCounter.textContent=currentImg+ " / "+ imgCount;
 }
+function createOverlay(){
+   let overlay = document.createElement("div");
+   overlay.id=
+}
 }
 window.addEventListener("load", setupGallery);
 
