@@ -44,7 +44,13 @@ lbPlay.id="lbPlay";
 lightBox.appendChild(lbImages);
 lbImages.id="lbImages";
 
-
+//Add images from imgfiles array to the container
+for (let i=0; i<imgCount;i++){
+   let image=document.createElement("img");
+   image.src=imgFiles[i];
+   image.alt=imgCaptions[i];
+   lbImages.appendChild(image);
+}
 }
 window.addEventListener("load", setupGallery);
 
