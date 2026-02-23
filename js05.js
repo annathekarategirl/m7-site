@@ -18,6 +18,7 @@ let lbTitle=document.createElement("h1");
 let lbCounter=document.createElement("div");
 let lbPrev=document.createElement("div");
 lbPrev.innerHTML= "&#9664;";
+lbPrev.onclick=showPrev;
 let lbNext=document.createElement("div");
 lbNext.innerHTML= "&#9654;";
 lbNext.onclick=showNext;
@@ -64,6 +65,12 @@ function showNext(){
    
    lbCounter.textContent=currentImg+ " / " + imgCount;
    }
+//function to move backward through the image list
+function showPrev(){
+   lbImages.insertBefore(lbImages.lastElementChild, lbImages.firstElementChild);
+      (currentImg>1) ? currentImg-- : currentImg = imgCount;
+      lbCounter.textContent=currentImg+ " / "+ imgCount;
+}
 }
 window.addEventListener("load", setupGallery);
 
