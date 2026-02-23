@@ -55,6 +55,14 @@ for (let i=0; i<imgCount;i++){
    image.alt=imgCaptions[i];
    lbImages.appendChild(image);
 }
+
+//Function to move forward through the image list
+function showNext(){
+   lbImages.appendChild(lbImages.firstElementChild);
+   (currentImg<imgCount) ? currentImg++ :currentImg=1;
+   
+   lbCounter.textContent=currentImg+ " / " + imgCount;
+   }
 }
 window.addEventListener("load", setupGallery);
 
