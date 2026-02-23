@@ -26,8 +26,16 @@ let lbPlay=document.createElement("div");
 lbPlay.innerHTML="&#9199;";
 let timeID;
 lbPlay.onclick = function(){
-   showNext();
-   timeID = window.setInterval(showNext,1500);
+   if (timeID){
+      //stop slideshow
+      window.clearInterval(timeID);
+      timeID=undefined;
+
+   }else {
+      //start slideshow
+      showNext();
+      timeID=window.setInterval(showNext,1500);
+   }
 }
 let lbImages=document.createElement("div");
 //Design lightbox title
