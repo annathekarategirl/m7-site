@@ -20,6 +20,7 @@ let lbPrev=document.createElement("div");
 lbPrev.innerHTML= "&#9664;";
 let lbNext=document.createElement("div");
 lbNext.innerHTML= "&#9654;";
+lbNext.onclick=showNext;
 let lbPlay=document.createElement("div");
 lbPlay.innerHTML="&#9199;";
 let lbImages=document.createElement("div");
