@@ -23,11 +23,12 @@ let lbImages=document.createElement("div");
 //Design lightbox title
 lightBox.appendChild(lbTitle);
 lbTitle.id="lbTitle";
-
+lbTitle.textContent=lightboxTitle;
 //Design lightbox slide counter
 lightBox.appendChild(lbCounter);
 lbCounter.id="lbCounter";
-
+let currentImg=1;
+lbCounter.textContent= currentImg+" / "+imgCount;
 //Design lightbox previous slide button
 lightBox.appendChild(lbPrev);
 lbPrev.id="lbPrev";
