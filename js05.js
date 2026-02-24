@@ -68,6 +68,7 @@ for (let i=0; i<imgCount;i++){
    let image=document.createElement("img");
    image.src=imgFiles[i];
    image.alt=imgCaptions[i];
+   image.onclick=createOverlay;
    lbImages.appendChild(image);
 }
 
@@ -86,7 +87,11 @@ function showPrev(){
 }
 function createOverlay(){
    let overlay = document.createElement("div");
-   overlay.id=
+   overlay.id="lbOverlay";
+   //add figure box to overlay
+   let figureBox=document.createElement("figure");
+   overlay.appendChild(figureBox);
+   document.body.appendChild(overlay);
 }
 }
 window.addEventListener("load", setupGallery);
