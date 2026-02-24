@@ -4,8 +4,8 @@
       Chapter Case
 
       Application to generate a slide show
-      Author: 
-      Date:   
+      Author: Anna Moore
+      Date:   2/24/26
 
       Filename: js05.js
 */
