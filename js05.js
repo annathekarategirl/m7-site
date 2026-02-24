@@ -98,6 +98,14 @@ function createOverlay(){
    let overlayCaption=document.createElement("figcaption");
    overlayCaption.textContent=this.alt;
    figureBox.appendChild(overlayCaption);
+   //Add a close button to the overlay
+   let closeBox=document.createElement("div");
+   closeBox.id="lbOverlayClose";
+   closeBox.innerHTML="&times;";
+   closeBox.onclick=function() {
+      document.body.removeChild(overlay);
+   }
+   overlay.appendChild(closeBox);
    document.body.appendChild(overlay);
 }
 }
