@@ -91,6 +91,13 @@ function createOverlay(){
    //add figure box to overlay
    let figureBox=document.createElement("figure");
    overlay.appendChild(figureBox);
+   //add the caption to the figure box
+   let overlayImage = this.cloneNode("true");
+   figureBox.appendChild(overlayImage)
+   //add caption to the figure box
+   let overlayCaption=document.createElement("figcaption");
+   overlayCaption.textContent=this.alt;
+   figureBox.appendChild(overlayCaption);
    document.body.appendChild(overlay);
 }
 }
